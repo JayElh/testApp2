@@ -1,0 +1,41 @@
+{
+    "name": "CustomerBank",
+    "fields": [
+        {
+            "fieldName": "fix",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "bank",
+            "otherEntityName": "bank",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "customerBank"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "customer",
+            "otherEntityName": "customer",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "customerBank"
+        }
+    ],
+    "changelogDate": "20180905084256",
+    "entityTableName": "customer_bank",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}
